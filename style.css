@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+*,
+*::after,
+* ::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #211d2b;
+  color: #ffffff;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background-image: url(./images/bg-stars.svg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  width: 100%;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  gap: 5em;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container .container-segment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-segment .timer {
+  display: flex;
+  gap: 0.5rem;
+}
+.container .container-segment .timer .flip-card {
+  color: hsl(345deg, 95%, 68%);
+  font-size: 5rem;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.container .container-segment .timer .flip-card .top {
+  background: #2c2c44;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+  height: 60px;
+  width: 90px;
+}
+.container .container-segment .timer .flip-card .top-flip {
+  width: 100%;
+  position: absolute;
+  -webkit-animation: flip-top 250ms ease-in;
+          animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+  background: #2c2c44;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+.container .container-segment .timer .flip-card .bottom {
+  background: #34364f;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+  height: 60px;
+  width: 90px;
+}
+.container .container-segment .timer .flip-card .bottom-flip {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  -webkit-animation: flip-bottom 250ms ease-out 250ms;
+          animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  background: #34364f;
+  display: flex;
+  align-items: flex-end;
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+.container .container-segment .text {
+  font-size: 0.6rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: #8e8da7;
+}
+
+#bg-hills {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .links {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+@-webkit-keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+@-webkit-keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+  }
+  .container {
+    gap: 0.5em;
+  }
+  .container .container-segment {
+    gap: unset;
+  }
+  .container .container-segment .timer {
+    gap: unset;
+  }
+  .container .container-segment .timer .flip-card {
+    font-size: 2.5rem;
+  }
+  .container .container-segment .timer .flip-card .top {
+    height: 30px;
+    width: 40px;
+  }
+  .container .container-segment .timer .flip-card .bottom {
+    height: 30px;
+    width: 40px;
+  }
+  .container .container-segment .text {
+    font-size: 0.4rem;
+    letter-spacing: 0.2rem;
+  }
+  #bg-hills {
+    height: 30vh;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
